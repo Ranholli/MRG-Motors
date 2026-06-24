@@ -21,7 +21,8 @@ body{
 #topo{
     display: flex;
     justify-content: space-between;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+    align-items: center;
 }
 
 #topo p{
@@ -36,21 +37,40 @@ body{
 
 #cabecalho li{
     margin: 0 3rem;
+    transition: 0.3s;
+}
+
+#cabecalho li:hover{
+    transform: translateY(-0.3rem);
 }
 
 #cabecalho nav a{
     text-decoration: none;
     color: #FBFCF8;
-    padding: 1rem;
-    
+    padding: 0.5rem 1rem;
+    position: relative;
+    transition: 0.3s;
+}
 
-    transition: 0.8s;
-}   
+#cabecalho nav a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2.8%;
+    background: white;
+    transition: .3s ease;
+}
 
-#cabecalho a:hover{
-    background: #FBFCF8;
+#cabecalho nav a:hover::after{
+    width: 100%;
+}
+
+#cabecalho nav a:hover{
+    /* background: #FBFCF8;
     color: #a20e0e;
-    border-radius: 1rem;
+    border-radius: 1rem; */
 }
 
 #carroheader{
@@ -71,7 +91,7 @@ body{
     left: 1.5rem;
     margin: 0;
     color: #FBFCF8;
-    font-size: larger;
+    font-size: 2.5rem;
     font-weight: bolder;
 }
 /* HEADER */
@@ -98,17 +118,25 @@ body{
     color: #a20e0e;
     font-size: 1.625rem;
     padding: 1rem;
-    transition: 0.8s;
     margin-right: 2rem;
+    position: relative;
 }
 
-#destaque a:hover{
+#destaque a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2.8%;
     background: #a20e0e;
-    color: whitesmoke;
-    border-radius: 1rem;
+    transition: .3s ease;
+
 }
 
-
+#destaque a:hover::after{
+    width: 100%;
+}
 
 #container{
     display: flex;
@@ -121,6 +149,14 @@ body{
     width: 300px;
     border-radius: 1rem;
     background: whitesmoke;
+
+    transition: .3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,.15);
+}
+
+.cards:hover{
+    transform: translateY(-0.5rem);
+    box-shadow: 0 12px 30px rgba(0,0,0,.25);
 }
 
 .cards img{
@@ -131,10 +167,6 @@ body{
     border-top-left-radius: 1rem;
 }
 
-.infos{
-    padding: 0 1.3rem;
-}
-
 .infos p{
     margin: 1rem 0.3125rem;
     font-size: 1.25rem;
@@ -142,13 +174,31 @@ body{
 
 .infos p:first-child{
     font-weight: bolder;
-    font-size: 2.1rem;
+    font-size: 2rem;
 }
 
-.infos p:last-child{
+#preço{
     font-weight: bolder;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     margin-top: 1rem;
+}
+
+.infos a{
+    color: whitesmoke;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    margin: 1rem;
+    background: #a20e0e;
+    border-radius: 1rem;
+    font-weight: bolder;
+    padding: 1rem;
+    font-size: 1.5rem;
+    transition: 0.6s;
+}
+
+.infos a:hover{
+    background: #1c1a1a;
 }
 /* SUPERCARROS NO ESTOQUE */
 

@@ -6,6 +6,7 @@ body{
     padding-bottom: 15rem;
 }
 
+/* Header */
 #cabecalho{
     background: #a20e0e;
     font-size: xx-large;
@@ -17,7 +18,8 @@ body{
 #topo{
     display: flex;
     justify-content: space-between;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+    align-items: center;
 }
 
 #topo p{
@@ -33,6 +35,11 @@ body{
 
 #cabecalho li{
     margin: 0 3rem;
+    transition: 0.3s;
+}
+
+#cabecalho li:hover{
+    transform: translateY(-0.3rem);
 }
 
 #cabecalho nav a{
@@ -44,11 +51,21 @@ body{
     transition: 0.8s;
 }   
 
-#cabecalho a:hover{
-    background: #FBFCF8;
-    color: #a20e0e;
-    border-radius: 1rem;
+#cabecalho nav a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2.8%;
+    background: white;
+    transition: .3s ease;
 }
+
+#cabecalho nav a:hover::after{
+    width: 100%;
+}
+/* Header */
 
 #estoque h1{
     color: whitesmoke;
@@ -81,9 +98,18 @@ body{
     margin-bottom: 10rem;
 }
 .cards{
-    width: 18.75rem;
+    max-width:18.75rem ;
+    width: 100%;
     border-radius: 1rem;
     background: whitesmoke;
+
+    transition: 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,.15);
+}
+
+.cards:hover{
+    /* transform: translateY(-0.5rem); */
+    box-shadow: 0 12px 30px rgba(255,255,255,.1);
 }
 
 .cards img{
