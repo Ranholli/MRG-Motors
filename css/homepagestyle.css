@@ -1,0 +1,254 @@
+body{
+    margin: 0;
+    background: #1c1a1a;
+    font-family: 'League Spartan', sans-serif;
+}
+
+#principal{
+    position: relative;
+    padding-bottom: 30rem;
+}
+
+/* HEADER */
+#cabecalho{
+    background: #a20e0e;
+    font-size: xx-large;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#topo{
+    display: flex;
+    justify-content: space-between;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#topo p{
+    margin-left: 2rem;
+}
+
+#cabecalho ul{
+    display: flex;
+    list-style: none;
+    color: whitesmoke;
+}
+
+#cabecalho li{
+    margin: 0 3rem;
+}
+
+#cabecalho nav a{
+    text-decoration: none;
+    color: #FBFCF8;
+    padding: 1rem;
+    
+
+    transition: 0.8s;
+}   
+
+#cabecalho a:hover{
+    background: #FBFCF8;
+    color: #a20e0e;
+    border-radius: 1rem;
+}
+
+#carroheader{
+    background-image: url(/imagens/Header/Ferrari250.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 60%;
+    /* width: 100%; */
+    height: 37.5rem;
+    /* max-width: 100; */
+    /* height: auto; */
+    position:relative;
+}
+
+#carroheader p{
+    position: absolute;
+    bottom: 1px;
+    left: 1.5rem;
+    margin: 0;
+    color: #FBFCF8;
+    font-size: larger;
+    font-weight: bolder;
+}
+/* HEADER */
+
+/* SUPERCARROS NO ESTOQUE */
+#destaque{
+    display: flex;
+    color: whitesmoke;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bolder;
+}
+
+#destaque h1{
+    font-size: 5rem;
+    margin-left: 1.5rem;
+}
+#destaque span{
+    color: #a20e0e;
+}
+
+#destaque a{
+    text-decoration: none;
+    color: #a20e0e;
+    font-size: 1.625rem;
+    padding: 1rem;
+    transition: 0.8s;
+    margin-right: 2rem;
+}
+
+#destaque a:hover{
+    background: #a20e0e;
+    color: whitesmoke;
+    border-radius: 1rem;
+}
+
+
+
+#container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.cards{
+    width: 300px;
+    border-radius: 1rem;
+    background: whitesmoke;
+}
+
+.cards img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+}
+
+.infos{
+    padding: 0 1.3rem;
+}
+
+.infos p{
+    margin: 1rem 0.3125rem;
+    font-size: 1.25rem;
+}
+
+.infos p:first-child{
+    font-weight: bolder;
+    font-size: 2.1rem;
+}
+
+.infos p:last-child{
+    font-weight: bolder;
+    font-size: 1.7rem;
+    margin-top: 1rem;
+}
+/* SUPERCARROS NO ESTOQUE */
+
+/* SOBRE NÓS */
+#about{
+    margin-top: 5rem;
+    color: whitesmoke;
+}
+
+#about h1{
+    margin-left: 1.5rem;
+    font-size: 5rem;
+}
+
+#about h1 span{
+    color: #a20e0e;
+}
+
+#sobre{
+    display: flex;
+    background: whitesmoke;
+    color: #1c1a1a;
+    width: 100%;
+    height: 30rem;
+}
+
+#barra-vermelha{
+    background: #a20e0e;
+    width: 4rem;
+    position: relative;
+    height: 31.25rem;
+    top: -1.25rem;
+}
+
+#conteudo{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+#texto{
+    font-size: 2rem;
+    padding: 1rem;
+    width: 40rem;
+    font-weight: bold;
+    margin-right: 0rem;
+    margin-left: 3rem;
+}
+
+#texto p span{
+    color: #a20e0e;
+}
+
+#aside-right{
+    display: flex;
+    flex-direction: column;
+    margin-right: 0;
+}
+
+#aside-right p{
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+#mapa{
+    width: 35rem;
+    height: 19.4rem;
+    margin-right: 5rem;
+}
+/* SOBRE NÓS */
+
+/* Footer */
+footer{
+    width: 100%;
+    background: #a20e0e;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: whitesmoke;
+    padding: 0;
+}
+
+footer p:first-child{
+    font-weight: bolder;
+    font-size: 2rem;
+    margin-bottom: 0;
+    
+}
+/* Footer */
+
+
+
+
+
+
+
+
+
+
