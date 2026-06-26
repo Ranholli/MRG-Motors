@@ -67,9 +67,6 @@ body{
     transition: 0.3s ease;
 }
 
-#cabecalho nav a:hover{
-    color: white;
-}
 
 #cabecalho nav a:hover::after{
     width: 100%;
@@ -348,6 +345,7 @@ body{
 /* SOBRE NÓS */
 
 
+/* FOOTER */
 footer{
     width: 100%;
     background: #111;
