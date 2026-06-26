@@ -5,72 +5,78 @@ body{
 }
 
 #principal{
-    position: relative;
-    padding-bottom: 30rem;
+    padding: 0;
 }
 
 /* HEADER */
 #cabecalho{
-    background: #a20e0e;
-    font-size: xx-large;
-    display: flex;
-    flex-direction: column;
     width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #111;
 }
 
 #topo{
     display: flex;
     justify-content: space-between;
-    font-family: Arial, Helvetica, sans-serif;
     align-items: center;
+    background: #111;
+    padding: 1.2rem 4rem;
+    border-bottom: 0.25rem solid #a20e0e;
+    box-sizing: border-box;  
 }
 
-#topo p{
-    margin-left: 2rem;
+.logo{
+    margin: 0;
+    color: whitesmoke;
+    font-size: 2rem;
+    font-weight: bolder;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
 }
 
 #cabecalho ul{
     display: flex;
     list-style: none;
-    color: whitesmoke;
+    gap: 3rem;
+    padding: 0;
+    margin: 0;
 }
 
 #cabecalho li{
-    margin: 0 3rem;
-    transition: 0.3s;
-}
-
-#cabecalho li:hover{
-    transform: translateY(-0.3rem);
+    transition: 0.3s ease;
 }
 
 #cabecalho nav a{
     text-decoration: none;
     color: #FBFCF8;
-    padding: 0.5rem 1rem;
+    font-size: 1.35rem;
+    font-weight: bold;
+    padding: 0.5rem 0;
     position: relative;
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 #cabecalho nav a::after{
     content: "";
     position: absolute;
     left: 0;
-    bottom: -4px;
+    bottom: -0.35rem;
     width: 0;
-    height: 2.8%;
-    background: white;
-    transition: .3s ease;
+    height: 0.15rem;
+    background: #a20e0e;
+    transition: 0.3s ease;
+}
+
+#cabecalho nav a:hover{
+    color: white;
 }
 
 #cabecalho nav a:hover::after{
     width: 100%;
 }
 
-#cabecalho nav a:hover{
-    /* background: #FBFCF8;
-    color: #a20e0e;
-    border-radius: 1rem; */
+#cabecalho li:hover{
+    transform: translateY(-0.25rem);
 }
 
 #carroheader{
@@ -78,109 +84,144 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center 60%;
-    /* width: 100%; */
     height: 37.5rem;
-    /* max-width: 100; */
-    /* height: auto; */
-    position:relative;
+    position: relative;
+}
+
+#carroheader::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.75),
+        rgba(0, 0, 0, 0.25),
+        rgba(0, 0, 0, 0.05)
+    );
 }
 
 #carroheader p{
     position: absolute;
-    bottom: 1px;
-    left: 1.5rem;
+    left: 2rem;
+    bottom: 3rem;
     margin: 0;
     color: #FBFCF8;
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: bolder;
+    max-width: 40rem;
+    text-shadow: 0 0.25rem 0.8rem rgba(0, 0, 0, 0.8);
 }
 /* HEADER */
 
 /* SUPERCARROS NO ESTOQUE */
 #destaque{
+    max-width: 1600px;
+    margin: 8rem auto 3rem auto;
+    padding: 0 2rem;
     display: flex;
-    color: whitesmoke;
     justify-content: space-between;
     align-items: center;
-    font-weight: bolder;
+    color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
 }
 
 #destaque h1{
-    font-size: 5rem;
-    margin-left: 1.5rem;
+    font-size: 4rem;
+    margin: 0;
+    font-weight: bolder;
 }
+
+#destaque h1::before{
+    content: "";
+    display: block;
+    width: 4rem;
+    height: 0.3rem;
+    background: #a20e0e;
+    margin-bottom: 1rem;
+}
+
 #destaque span{
     color: #a20e0e;
 }
 
 #destaque a{
     text-decoration: none;
-    color: #a20e0e;
-    font-size: 1.625rem;
-    padding: 1rem;
-    margin-right: 2rem;
-    position: relative;
+    color: whitesmoke;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border: 0.15rem solid #a20e0e;
+    padding: 0.9rem 1.4rem;
+    border-radius: 2rem;
+    transition: 0.3s ease;
+    white-space: nowrap;
 }
 
-#destaque a::after{
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -4px;
-    width: 0;
-    height: 2.8%;
+#destaque a:hover{
     background: #a20e0e;
-    transition: .3s ease;
-
+    transform: translateY(-0.2rem);
 }
 
-#destaque a:hover::after{
-    width: 100%;
+#destaque p{
+    font-size: 1.3rem;
 }
 
 #container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 2rem;
+    box-sizing: border-box;
 }
 
 .cards{
     width: 300px;
     border-radius: 1rem;
-    background: whitesmoke;
-
-    transition: .3s ease;
-    box-shadow: 0 4px 10px rgba(0,0,0,.15);
+    background: #111;
+    color: whitesmoke;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.08);
+    transition: 0.3s ease;
+    box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,.35);
 }
 
 .cards:hover{
     transform: translateY(-0.5rem);
-    box-shadow: 0 12px 30px rgba(0,0,0,.25);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.5);
 }
 
 .cards img{
     width: 100%;
     height: 200px;
     object-fit: cover;
-    border-top-right-radius: 1rem;
-    border-top-left-radius: 1rem;
+    display: block;
+}
+
+.infos{
+    padding: 1.2rem;
 }
 
 .infos p{
-    margin: 1rem 0.3125rem;
-    font-size: 1.25rem;
+    margin: 0.6rem 0;
+    font-size: 1.2rem;
+    color: #ccc;
 }
 
-.infos p:first-child{
+.nome-carro{
     font-weight: bolder;
-    font-size: 2rem;
+    font-size: 1.7rem !important;
+    color: whitesmoke !important;
+    margin-top: 0 !important;
 }
 
-#preço{
+.preco{
     font-weight: bolder;
-    font-size: 1.5rem;
-    margin-top: 1rem;
+    font-size: 1.4rem !important;
+    color: #a20e0e !important;
+    margin-top: 1rem !important;
 }
 
 .infos a{
@@ -188,29 +229,44 @@ body{
     display: block;
     text-decoration: none;
     text-align: center;
-    margin: 1rem;
+    margin-top: 1.2rem;
     background: #a20e0e;
-    border-radius: 1rem;
+    border-radius: 2rem;
     font-weight: bolder;
-    padding: 1rem;
-    font-size: 1.5rem;
-    transition: 0.6s;
+    padding: 0.9rem;
+    font-size: 1.1rem;
+    transition: 0.3s ease;
 }
 
 .infos a:hover{
-    background: #1c1a1a;
+    background: #7d0b0b;
+    transform: translateY(-0.2rem);
 }
 /* SUPERCARROS NO ESTOQUE */
 
 /* SOBRE NÓS */
 #about{
-    margin-top: 5rem;
+    max-width: 1600px;
+    margin: 10rem auto 0 auto;
+    padding: 0 4rem;
     color: whitesmoke;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 #about h1{
-    margin-left: 1.5rem;
-    font-size: 5rem;
+    font-size: 4rem;
+    margin: 0 0 4rem 0;
+    font-weight: bolder;
+}
+
+#about h1::before{
+    content: "";
+    display: block;
+    width: 4rem;
+    height: 0.3rem;
+    background: #a20e0e;
+    margin-bottom: 1rem;
 }
 
 #about h1 span{
@@ -218,34 +274,48 @@ body{
 }
 
 #sobre{
+    position: relative;
     display: flex;
-    background: whitesmoke;
-    color: #1c1a1a;
+    background: #111;
+    color: whitesmoke;
     width: 100%;
-    height: 30rem;
+    min-height: 34rem;
+    border-radius: 1rem;
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.45);
+    overflow: visible;
 }
 
 #barra-vermelha{
-    background: #a20e0e;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
     width: 4rem;
-    position: relative;
-    height: 31.25rem;
-    top: -1.25rem;
+    background: #a20e0e;
+    border-radius: 1rem 0 0 1rem;
 }
 
 #conteudo{
     display: flex;
-    width: 100%;
     justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+    width: 100%;
+    padding: 3rem 4rem 3rem 7rem;
+    box-sizing: border-box;
 }
 
 #texto{
-    font-size: 2rem;
-    padding: 1rem;
-    width: 40rem;
+    max-width: 42rem;
+    font-size: 1.55rem;
+    line-height: 1.5;
     font-weight: bold;
-    margin-right: 0rem;
-    margin-left: 3rem;
+}
+
+#texto p{
+    margin: 0;
+    color: #ddd;
 }
 
 #texto p span{
@@ -255,45 +325,68 @@ body{
 #aside-right{
     display: flex;
     flex-direction: column;
-    margin-right: 0;
-}
-
-#aside-right p{
-    font-size: 2rem;
-    font-weight: bold;
-    margin: 0;
+    gap: 1rem;
 }
 
 #mapa{
-    width: 35rem;
-    height: 19.4rem;
-    margin-right: 5rem;
+    width: 38rem;
+    height: 21rem;
+    border-radius: 1rem;
+    box-shadow: 0 0.8rem 1.5rem rgba(0,0,0,.45);
+}
+
+#aside-right p{
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0;
+    color: #ccc;
+}
+
+#aside-right p:hover{
+    color: whitesmoke;
 }
 /* SOBRE NÓS */
 
-/* Footer */
+
 footer{
     width: 100%;
-    background: #a20e0e;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    text-align: center;
-    font-size: 1.5rem;
-    font-weight: bold;
+    background: #111;
     color: whitesmoke;
-    padding: 0;
+    margin-top: 10rem;
+    padding: 2.5rem 4rem;
+    border-top: 0.4rem solid #a20e0e;
+    box-sizing: border-box;
 }
 
-footer p:first-child{
-    font-weight: bolder;
+.footer-conteudo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.footer-logo{
     font-size: 2rem;
-    margin-bottom: 0;
-    
+    font-weight: bolder;
+    margin: 0;
+    color: #fff;
 }
-/* Footer */
 
+.footer-frase{
+    font-size: 1.1rem;
+    margin: 0.5rem 0 0 0;
+    color: #ccc;
+}
 
+.footer-creditos{
+    text-align: right;
+    font-size: 0.95rem;
+    color: #bbb;
+}
+
+.footer-creditos p{
+    margin: 0.3rem 0;
+}
 
 
 
