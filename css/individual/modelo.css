@@ -85,7 +85,6 @@ body{
     box-sizing: border-box;
 }
 
-/* Galeria de imagens */
 #showcase{
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -111,7 +110,6 @@ body{
     transform: scale(1.02);
 }
 
-/* Card principal */
 #card-info{
     background: #111;
     color: whitesmoke;
@@ -208,7 +206,6 @@ body{
     transform: translateY(-0.2rem);
 }
 
-/* Mais informações */
 #card-mais-info{
     grid-column: 1 / -1;
     background: #111;
@@ -254,7 +251,6 @@ body{
     padding: 1rem;
 }
 
-/* Chamada final */
 #sonho{
     max-width: 1600px;
     margin: 5rem auto 0 auto;
