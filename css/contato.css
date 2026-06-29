@@ -1,0 +1,119 @@
+body{
+    margin: 0;
+    background: #1c1a1a;
+    font-family: 'League Spartan', sans-serif;
+}
+
+/* HEADER */
+#cabecalho{
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #111;
+}
+
+#topo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #111;
+    padding: 1.2rem 4rem;
+    border-bottom: 0.25rem solid #a20e0e;
+    box-sizing: border-box;  
+}
+
+.logo{
+    margin: 0;
+    color: whitesmoke;
+    font-size: 2rem;
+    font-weight: bolder;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+}
+
+#cabecalho ul{
+    display: flex;
+    list-style: none;
+    gap: 3rem;
+    padding: 0;
+    margin: 0;
+}
+
+#cabecalho li{
+    transition: 0.3s ease;
+}
+
+#cabecalho nav a{
+    text-decoration: none;
+    color: #FBFCF8;
+    font-size: 1.35rem;
+    font-weight: bold;
+    padding: 0.5rem 0;
+    position: relative;
+    transition: 0.3s ease;
+}
+
+#cabecalho nav a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.35rem;
+    width: 0;
+    height: 0.15rem;
+    background: #a20e0e;
+    transition: 0.3s ease;
+}
+
+
+#cabecalho nav a:hover::after{
+    width: 100%;
+}
+
+#cabecalho li:hover{
+    transform: translateY(-0.25rem);
+}
+
+/* HEADER */
+
+
+
+/* FOOTER */
+footer{
+    width: 100%;
+    background: #111;
+    color: whitesmoke;
+    margin-top: 10rem;
+    padding: 2.5rem 4rem;
+    border-top: 0.4rem solid #a20e0e;
+    box-sizing: border-box;
+}
+
+.footer-conteudo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.footer-logo{
+    font-size: 2rem;
+    font-weight: bolder;
+    margin: 0;
+    color: #fff;
+}
+
+.footer-frase{
+    font-size: 1.1rem;
+    margin: 0.5rem 0 0 0;
+    color: #ccc;
+}
+
+.footer-creditos{
+    text-align: right;
+    font-size: 0.95rem;
+    color: #bbb;
+}
+
+.footer-creditos p{
+    margin: 0.3rem 0;
+}
+/* FOOTER */
