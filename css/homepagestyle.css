@@ -77,7 +77,7 @@ body{
 }
 
 #carroheader{
-    background-image: url(/imagens/Header/Ferrari250.jpg);
+    background-image: url(../imagens/Header/Ferrari250.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center 60%;
