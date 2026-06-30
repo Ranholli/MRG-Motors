@@ -209,16 +209,16 @@ body{
 
 .nome-carro{
     font-weight: bolder;
-    font-size: 1.7rem !important;
-    color: whitesmoke !important;
-    margin-top: 0 !important;
+    font-size: 1.7rem ;
+    color: whitesmoke ;
+    margin-top: 0 ;
 }
 
 .preco{
     font-weight: bolder;
-    font-size: 1.4rem !important;
-    color: #a20e0e !important;
-    margin-top: 1rem !important;
+    font-size: 1.4rem ;
+    color: #a20e0e ;
+    margin-top: 1rem ;
 }
 
 .infos a{

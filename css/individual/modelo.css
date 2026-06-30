@@ -74,7 +74,7 @@ body{
 
 /* HEADER */
 
-#conteudo-carro{
+/* #conteudo-carro{
     max-width: 1600px;
     margin: 8rem auto 0 auto;
     padding: 0 2rem;
@@ -83,6 +83,17 @@ body{
     gap: 2.5rem;
     align-items: start;
     box-sizing: border-box;
+} */
+
+#conteudo-carro{
+    max-width: 1600px;
+    margin: 8rem auto 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    align-items: flex-start;
+    box-sizing: border-box;
 }
 
 #showcase{
@@ -90,6 +101,8 @@ body{
     grid-template-columns: 2fr 1fr;
     grid-template-rows: repeat(2, 16rem);
     gap: 1rem;
+    flex: 1.4;
+    min-width: 0;
 }
 
 #showcase img{
@@ -119,6 +132,8 @@ body{
     padding: 2rem;
     box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,.35);
     box-sizing: border-box;
+    flex: 0.9;
+    min-width: 22rem;
 }
 
 #card-info h1{
@@ -154,7 +169,7 @@ body{
     padding: 0;
     margin: 2rem 0 0 0;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
     gap: 1rem;
 }
 
@@ -166,7 +181,6 @@ body{
 }
 
 #card-info li span{
-    display: block;
     color: #a20e0e;
     font-size: 0.95rem;
     font-weight: bolder;
@@ -182,10 +196,7 @@ body{
 }
 
 .botao-contato{
-    grid-column: 1 / -1;
-    padding: 0;
-    background: transparent;
-    border: none;
+    grid-column: 1 / 3;
 }
 
 .botao-contato a{
@@ -207,7 +218,6 @@ body{
 }
 
 #card-mais-info{
-    grid-column: 1 / -1;
     background: #111;
     color: whitesmoke;
     border-radius: 1rem;
@@ -237,12 +247,15 @@ body{
     padding: 0;
     margin: 0;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr 1fr;
+    /* display: flex;
+    flex-wrap: wrap; */
     gap: 1rem;
 }
 
 #card-mais-info li{
-    color: #ccc;
+    /* color: #ccc; */
+    color: whitesmoke;
     font-size: 1.1rem;
     font-weight: bold;
     background: rgba(255,255,255,0.04);
@@ -252,7 +265,7 @@ body{
 }
 
 #sonho{
-    max-width: 1600px;
+    max-width: 100rem;
     margin: 5rem auto 0 auto;
     padding: 3rem 2rem;
     background: #111;
@@ -265,7 +278,7 @@ body{
 }
 
 #sonho hr{
-    width: 4rem;
+    width: 10rem;
     height: 0.3rem;
     background: #a20e0e;
     border: none;
