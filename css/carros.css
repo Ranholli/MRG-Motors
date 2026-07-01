@@ -24,7 +24,7 @@ body{
 .logo{
     margin: 0;
     color: whitesmoke;
-    font-size: 2rem;
+    font-size: clamp(1.6rem, 3vw, 2rem);
     font-weight: bolder;
     letter-spacing: 0.1rem;
     text-transform: uppercase;
@@ -45,7 +45,7 @@ body{
 #cabecalho nav a{
     text-decoration: none;
     color: #FBFCF8;
-    font-size: 1.35rem;
+    font-size: clamp(1rem, 2vw, 1.35rem);
     font-weight: bold;
     padding: 0.5rem 0;
     position: relative;
@@ -87,7 +87,7 @@ body{
 }
 
 .estoque-titulo h1{
-    font-size: 4rem;
+    font-size: clamp(2.4rem, 6vw, 4rem);
     margin: 0;
     font-weight: bolder;
 }
@@ -106,7 +106,7 @@ body{
 }
 
 .estoque-titulo p{
-    font-size: 1.3rem;
+    font-size: clamp(1rem, 2vw, 1.3rem);
     color: #bbb;
     margin-top: 0.8rem;
 }
@@ -149,20 +149,20 @@ body{
 
 .infos p{
     margin: 0.6rem 0;
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 1.8vw, 1.2rem);
     color: #ccc;
 }
 
 .nome-carro{
     font-weight: bolder;
-    font-size: 1.7rem;
+    font-size: clamp(1.4rem, 2.5vw, 1.7rem);
     color: whitesmoke;
     margin-top: 0 
 }
 
 .preco{
     font-weight: bolder;
-    font-size: 1.4rem;
+    font-size: clamp(1.2rem, 2vw, 1.4rem);
     color: #a20e0e;
     margin-top: 1rem;
 }
@@ -172,7 +172,7 @@ body{
     display: block;
     text-decoration: none;
     text-align: center;
-    margin-top: 1.2rem;
+    margin-top: clamp(1rem, 1.8vw, 1.1rem);
     background: #a20e0e;
     border-radius: 2rem;
     font-weight: bolder;
@@ -205,21 +205,21 @@ footer{
 }
 
 .footer-logo{
-    font-size: 2rem;
+    font-size: clamp(1.6rem, 3vw, 2rem);
     font-weight: bolder;
     margin: 0;
     color: #fff;
 }
 
 .footer-frase{
-    font-size: 1.1rem;
+    font-size: clamp(1rem, 1.8vw, 1.1rem);
     margin: 0.5rem 0 0 0;
     color: #ccc;
 }
 
 .footer-creditos{
     text-align: right;
-    font-size: 0.95rem;
+    font-size: clamp(0.85rem, 1.5vw, 0.95rem);
     color: #bbb;
 }
 
@@ -232,3 +232,53 @@ footer a{
     color: #a20e0e;
 }
 
+
+@media screen and (max-width: 1100px) {
+    .container{
+        grid-template-columns: repeat(2, 18.75rem);
+    }
+}
+
+@media screen and (max-width: 900px) {
+    #topo{
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1.5rem 2rem;
+    }
+
+    #cabecalho ul{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+}
+
+
+
+@media screen and (max-width: 780px) {
+    #topo{
+        flex-direction: column;
+        padding: 1.5rem;
+    }
+
+    .container{
+        gap: 2rem;
+        grid-template-columns: 1fr;
+    }
+
+    footer{
+        padding: 2rem 1.5rem;
+        margin-top: 6rem;
+    }
+
+    .footer-conteudo{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-creditos{
+        text-align: center;
+    }
+
+}

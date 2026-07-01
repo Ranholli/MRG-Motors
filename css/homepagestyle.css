@@ -515,6 +515,20 @@ footer a{
     #mapa{
         height: 14rem;
     }
+
+    footer{
+        padding: 2rem 1.5rem;
+        margin-top: 6rem;
+    }
+
+    .footer-conteudo{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-creditos{
+        text-align: center;
+    }
 }
 
 
