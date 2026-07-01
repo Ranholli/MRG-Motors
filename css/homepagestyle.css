@@ -485,13 +485,18 @@ footer a{
     #destaque{
        flex-direction: column; 
        align-items: flex-start;
-       margin-top: 5rem;
+       margin-top: 2rem;
        gap: 1.5rem;
+    }
+
+    #carroheader{
+        height: 26rem;
+        background-position: center;
     }
 
     #about{
         padding: 0 1.5rem;
-        
+        margin-top: 2rem;
     }
 
     #about h1{
