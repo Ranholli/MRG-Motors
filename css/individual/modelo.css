@@ -353,4 +353,9 @@ footer{
 .footer-creditos p{
     margin: 0.3rem 0;
 }
+
+footer a{
+    text-decoration: none;
+    color: #a20e0e;
+}
 /* FOOTER */

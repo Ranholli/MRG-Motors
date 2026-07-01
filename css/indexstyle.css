@@ -1,0 +1,123 @@
+body{
+    margin: 0;
+    min-height: 100vh;
+    background: #1c1a1a;
+    font-family: 'League Spartan', Arial, Helvetica, sans-serif;
+    color: whitesmoke;
+}
+
+main{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background:linear-gradient(
+            rgba(0, 0, 0, 0.75),
+            rgba(0, 0, 0, 0.85)
+        ),#1c1a1a;
+}
+
+#card-entrada{
+    width: 100%;
+    max-width: 60rem;
+    background: #111;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-top: 0.4rem solid #a20e0e;
+    border-radius: 1rem;
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.45);
+    padding: 3rem;
+    text-align: center;
+}
+
+#logo-link{
+    display: inline-block;
+    transition: 0.3s ease;
+}
+
+#logo-link:hover{
+    transform: translateY(-0.4rem);
+}
+
+#logo-link img{
+    width: 100%;
+    max-width: 34rem;
+    display: block;
+    margin: 0 auto;
+    border-radius: 0.5rem;
+}
+
+#texto-entrada h1{
+    font-size: 4rem;
+    margin: 2rem 0 1rem 0;
+    font-weight: bolder;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+}
+
+#texto-entrada h1::before{
+    content: "";
+    display: block;
+    width: 4rem;
+    height: 0.3rem;
+    background: #a20e0e;
+    margin: 0 auto 1rem auto;
+}
+
+#texto-entrada span{
+    color: #a20e0e;
+}
+
+#texto-entrada p{
+    max-width: 45rem;
+    margin: 0 auto;
+    color: #ccc;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    font-weight: bold;
+}
+
+.instrucao{
+    margin-top: 1.5rem !important;
+    color: #bbb !important;
+    font-size: 1.1rem !important;
+}
+
+#autores{
+    margin-top: 2.5rem;
+    padding: 1.5rem;
+    background: rgba(255,255,255,0.04);
+    border-left: 0.25rem solid #a20e0e;
+    border-radius: 0.8rem;
+}
+
+#autores h2{
+    margin: 0 0 1rem 0;
+    color: whitesmoke;
+    font-size: 1.8rem;
+}
+
+#autores p{
+    margin: 0.3rem 0;
+    color: #ccc;
+    font-size: 1.15rem;
+    font-weight: bold;
+}
+
+.botao-entrar{
+    display: inline-block;
+    margin-top: 2.5rem;
+    color: whitesmoke;
+    background: #a20e0e;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    transition: 0.3s ease;
+}
+
+.botao-entrar:hover{
+    background: #7d0b0b;
+    transform: translateY(-0.2rem);
+}
