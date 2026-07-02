@@ -24,7 +24,7 @@ body{
 .logo{
     margin: 0;
     color: whitesmoke;
-    font-size: 2rem;
+    font-size: clamp(1.6rem, 3vw, 2rem);
     font-weight: bolder;
     letter-spacing: 0.1rem;
     text-transform: uppercase;
@@ -45,7 +45,7 @@ body{
 #cabecalho nav a{
     text-decoration: none;
     color: #FBFCF8;
-    font-size: 1.35rem;
+    font-size: clamp(1rem, 2vw, 1.35rem);
     font-weight: bold;
     padding: 0.5rem 0;
     position: relative;
@@ -133,11 +133,10 @@ body{
     box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,.35);
     box-sizing: border-box;
     flex: 0.9;
-    min-width: 22rem;
 }
 
 #card-info h1{
-    font-size: 3rem;
+    font-size: clamp(2.2rem, 5vw, 3rem);
     margin: 0;
     font-weight: bolder;
 }
@@ -153,13 +152,13 @@ body{
 
 .subtitulo-carro{
     color: #bbb;
-    font-size: 1.3rem;
+    font-size: clamp(1rem, 2vw, 1.3rem);
     margin: 0.8rem 0 0 0;
 }
 
 .preco-detalhe{
     color: #a20e0e;
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 3vw, 2rem);
     font-weight: bolder;
     margin: 1.5rem 0;
 }
@@ -182,7 +181,7 @@ body{
 
 #card-info li span{
     color: #a20e0e;
-    font-size: 0.95rem;
+    font-size: clamp(0.85rem, 1.4vw, 0.95rem);
     font-weight: bolder;
     text-transform: uppercase;
     letter-spacing: 0.05rem;
@@ -191,7 +190,7 @@ body{
 #card-info li p{
     margin: 0.4rem 0 0 0;
     color: #ddd;
-    font-size: 1.15rem;
+    font-size: clamp(1rem, 1.8vw, 1.15rem);
     font-weight: bold;
 }
 
@@ -208,7 +207,7 @@ body{
     border-radius: 2rem;
     font-weight: bolder;
     padding: 1rem;
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 1.8vw, 1.2rem);
     transition: 0.3s ease;
 }
 
@@ -225,10 +224,11 @@ body{
     padding: 2rem;
     box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,.35);
     box-sizing: border-box;
+    flex-basis: 100%;
 }
 
 #card-mais-info h1{
-    font-size: 3rem;
+    font-size: clamp(2.2rem, 5vw, 3rem);
     margin: 0 0 2rem 0;
     font-weight: bolder;
 }
@@ -256,12 +256,59 @@ body{
 #card-mais-info li{
     /* color: #ccc; */
     color: whitesmoke;
-    font-size: 1.1rem;
+    font-size: clamp(1rem, 1.8vw, 1.1rem);
     font-weight: bold;
     background: rgba(255,255,255,0.04);
     border-left: 0.25rem solid #a20e0e;
     border-radius: 0.6rem;
     padding: 1rem;
+}
+
+#descricao-pagamento{
+    max-width: 100rem;
+    margin: 5rem auto 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    box-sizing: border-box;
+}
+
+.bloco-detalhe{
+    background: #111;
+    color: whitesmoke;
+    border-radius: 1rem;
+    border: 1px solid rgba(255,255,255,0.08);
+    padding: 2rem;
+    box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,.35);
+}
+
+.bloco-detalhe h1{
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin: 0 0 1.5rem 0;
+    font-weight: bolder;
+}
+
+.bloco-detalhe h1::before{
+    content: "";
+    display: block;
+    width: 4rem;
+    height: 0.3rem;
+    background: #a20e0e;
+    margin-bottom: 1rem;
+}
+
+.bloco-detalhe p,
+.bloco-detalhe li{
+    color: #ccc;
+    font-size: clamp(1rem, 1.8vw, 1.15rem);
+    line-height: 1.5;
+    font-weight: bold;
+}
+
+.bloco-detalhe ul{
+    margin: 0;
+    padding-left: 1.2rem;
 }
 
 #sonho{
@@ -286,7 +333,7 @@ body{
 }
 
 #sonho h1{
-    font-size: 3rem;
+    font-size: clamp(2rem, 5vw, 3rem);
     margin: 0 0 2rem 0;
     font-weight: bolder;
 }
@@ -298,7 +345,7 @@ body{
     background: #a20e0e;
     padding: 1rem 2rem;
     border-radius: 2rem;
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 1.8vw, 1.2rem);
     font-weight: bolder;
     transition: 0.3s ease;
 }
@@ -332,21 +379,21 @@ footer{
 }
 
 .footer-logo{
-    font-size: 2rem;
+    font-size: clamp(1.6rem, 3vw, 2rem);
     font-weight: bolder;
     margin: 0;
     color: #fff;
 }
 
 .footer-frase{
-    font-size: 1.1rem;
+    font-size: clamp(1rem, 1.8vw, 1.1rem);
     margin: 0.5rem 0 0 0;
     color: #ccc;
 }
 
 .footer-creditos{
     text-align: right;
-    font-size: 0.95rem;
+    font-size: clamp(0.85rem, 1.5vw, 0.95rem);
     color: #bbb;
 }
 
@@ -359,3 +406,113 @@ footer a{
     color: #a20e0e;
 }
 /* FOOTER */
+
+/* Responsividade */
+@media screen and (max-width: 1200px) {
+    #conteudo-carro{
+        margin-top: 5rem;
+    }
+
+    #showcase{
+        flex-basis: 100%;
+    }
+
+    #card-info{
+        flex-basis: 100%;
+        width: 100%;
+        min-width: 0;
+    }
+
+    #card-mais-info{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    #topo{
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1.5rem 2rem;
+    }
+
+    #cabecalho ul{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    #card-mais-info ul{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    #topo{
+        flex-direction: column;
+        padding: 1.5rem;
+    }
+
+    #conteudo-carro{
+        margin-top: 3rem;
+        padding: 0 1.5rem;
+        gap: 2rem;
+    }
+
+    #showcase{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 14rem);
+    }
+
+    #showcase img:first-child{
+        grid-row: auto;
+    }
+
+    #card-info{
+        padding: 1.5rem;
+    }
+
+    #card-info ul{
+        grid-template-columns: 1fr;
+    }
+
+    .botao-contato{
+        grid-column: auto;
+    }
+
+    #card-mais-info{
+        padding: 1.5rem;
+    }
+
+    #card-mais-info ul{
+        grid-template-columns: 1fr;
+    }
+
+    #sonho{
+        margin: 3rem 1.5rem 0 1.5rem;
+        padding: 2rem 1.5rem;
+    }
+
+    footer{
+        padding: 2rem 1.5rem;
+        margin-top: 6rem;
+    }
+
+    .footer-conteudo{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-creditos{
+        text-align: center;
+    }
+
+     #descricao-pagamento{
+        grid-template-columns: 1fr;
+        padding: 0 1.5rem;
+        margin-top: 3rem;
+    }
+
+    .bloco-detalhe{
+        padding: 1.5rem;
+    }
+}
