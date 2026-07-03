@@ -37,7 +37,7 @@
         </div>
 
         <div id="contato-conteudo">
-            <form id="form-contato">
+            <form id="form-contato" method="post">
                 <h2>Envie sua mensagem</h2>
 
                 <label for="nome">Nome</label>
@@ -47,7 +47,7 @@
                 <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com">
 
                 <label for="telefone">Telefone</label>
-                <input type="tel" id="telefone" name="telefone" placeholder="(28) 99999-9999">
+                <input type="tel" id="telefone" name="telefone" placeholder="(28) 99999-9999" pattern="\(\d{2}\)\d{5}-\d{4}">
 
                 <label for="modelo">Modelo de interesse</label>
                 <input type="text" id="modelo" name="modelo" placeholder="Ex: Ferrari 458 Italia">
@@ -56,6 +56,7 @@
                 <textarea id="mensagem" name="mensagem" placeholder="Escreva sua mensagem"></textarea>
 
                 <button type="submit">Solicitar contato</button>
+                <button type="reset">Limpar formulário"</button>
             </form>
 
             <aside id="info-contato">
