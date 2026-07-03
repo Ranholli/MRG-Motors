@@ -24,10 +24,17 @@ body{
 .logo{
     margin: 0;
     color: whitesmoke;
-    font-size: 2rem;
+    /* font-size: 2rem; */
+    font-size: clamp(1.6rem, 3vw, 2rem);
     font-weight: bolder;
     letter-spacing: 0.1rem;
     text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.logo:hover{
+    transform: translateY(-0.2rem);
 }
 
 #cabecalho ul{
