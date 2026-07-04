@@ -364,16 +364,7 @@ footer a{
         margin-bottom: 2.5rem;
     }
 
-    .contato-titulo h1{
-        text-align: center;
-    }
-
-    .contato-titulo h1::before{
-        margin: 0 auto 1rem;
-    }
-
     .contato-titulo p{
-        text-align: center;
         max-width: 100%;
     }
 
