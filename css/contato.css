@@ -331,6 +331,10 @@ footer a{
         gap: 1rem;
     }
 
+    #info-contato h2{
+    grid-column: 1 / -1;
+    }
+
     .info-item{
         margin-bottom: 0;
     }

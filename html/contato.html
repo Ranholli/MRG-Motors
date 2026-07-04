@@ -17,7 +17,8 @@
     <div id="principal">
         <header id="cabecalho">
             <div id="topo">
-                <p class="logo">MRG Motors</p>
+                <a class="logo" href="../index.html">MRG MOTORS</a>
+
                 <nav>
                     <ul>
                         <li><a href="homepage.html">Inicio</a></li>
@@ -29,93 +30,95 @@
                     </ul>
                 </nav>
             </div>
+        </header>
 
-        <section id="contato">
-
-            <div class="contato-titulo">
-                <h1><span>Entre</span> em contato</h1>
-                <p>
-                    Fale com a MRG Motors para tirar dúvidas, solicitar uma proposta
-                    ou agendar uma visita.
-                </p>
-            </div>
-
-            <div id="contato-conteudo">
-                <div class="formulario-card">
-                    <form id="form-contato" method="post" action="enviar.html">
-                        <h2>Envie sua mensagem</h2>
-                        <!-- <label for="nome">Nome</label>
-                        <input
-                            type="text" id="nome" name="nome" placeholder="Digite seu nome" required> -->
-
-                        <label for="email">E-mail</label>
-                        <input 
-                            type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
-
-                        <!-- <label for="telefone">Telefone</label>
-                        <input
-                            type="tel" id="telefone" name="telefone" placeholder="(28) 99999-9999"> -->
-
-                        <label for="modelo">Assunto</label>
-                        <input
-                            type="text"id="modelo"name="modelo" placeholder="Ex: Modelo de carro">
-
-                        <label for="mensagem">Mensagem</label>
-                        <textarea
-                            id="mensagem" name="mensagem" rows="6"placeholder="Escreva sua mensagem..." required></textarea>
-
-                        <div class="botoes">
-                            <button type="submit">
-                                ENVIAR
-                            </button>
-                            <button type="reset">
-                                LIMPAR
-                            </button>
-                        </div>
-                    </form>
+        <main>
+            <section id="contato">
+                <div class="contato-titulo">
+                    <h1><span>Entre</span> em contato</h1>
+                    <p>
+                        Fale com a MRG Motors para tirar dúvidas, solicitar uma proposta
+                        ou agendar uma visita.
+                    </p>
                 </div>
 
-                <aside id="info-contato">
+                <div id="contato-conteudo">
+                    <div class="formulario-card">
+                        <form id="form-contato" method="post" action="mailto:contato@mrgmotors.com.br" enctype="text/plain">
+                            <h2>Envie sua mensagem</h2>
 
-                    <h2>Informações</h2>
+                            <!-- <label for="nome">Nome</label>
+                            <input
+                                type="text" id="nome" name="nome" placeholder="Digite seu nome" required> -->
 
-                    <div class="info-item">
-                        <span>📍 Localização</span>
-                        <p>Alegre - ES</p>
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+
+                            <!-- <label for="telefone">Telefone</label>
+                            <input
+                                type="tel" id="telefone" name="telefone" placeholder="(28) 99999-9999"> -->
+
+                            <label for="modelo">Assunto</label>
+                            <input type="text" id="modelo" name="modelo" placeholder="Ex: Modelo de carro">
+
+                            <label for="mensagem">Mensagem</label>
+                            <textarea id="mensagem" name="mensagem" rows="6" placeholder="Escreva sua mensagem..."
+                                required></textarea>
+
+                            <div class="botoes">
+                                <button type="submit">
+                                    ENVIAR
+                                </button>
+
+                                <button type="reset">
+                                    LIMPAR
+                                </button>
+                            </div>
+                        </form>
                     </div>
 
-                    <div class="info-item">
-                        <span>📞 Telefone</span>
-                        <p>(28) 99999-9999</p>
-                    </div>
+                    <aside id="info-contato">
+                        <h2>Informações</h2>
 
-                    <div class="info-item">
-                        <span>✉️ E-mail</span>
-                        <p>contato@mrgmotors.com.br</p>
-                    </div>
+                        <div class="info-item">
+                            <span>📍 Localização</span>
+                            <p>Alegre - ES</p>
+                        </div>
 
-                    <div class="info-item">
-                        <span>⏰ Atendimento</span>
-                        <p>Segunda a sexta, das 08h às 18h</p>
-                    </div>
-                </aside>
-            </div>
-        </section>
-    </main>
+                        <div class="info-item">
+                            <span>📞 Telefone</span>
+                            <p>(28) 99999-9999</p>
+                        </div>
+
+                        <div class="info-item">
+                            <span>✉️ E-mail</span>
+                            <p>contato@mrgmotors.com.br</p>
+                        </div>
+
+                        <div class="info-item">
+                            <span>⏰ Atendimento</span>
+                            <p>Segunda a sexta, das 08h às 18h</p>
+                        </div>
+                    </aside>
+                </div>
+            </section>
+        </main>
 
         <footer>
-            <div class="footer-conteudo"> 
-                <div class="footer-marca"> 
-                    <p class="footer-logo">MRG Motors</p> 
-                    <p class="footer-frase">Sua próxima máquina está aqui.</p> 
+            <div class="footer-conteudo">
+                <div class="footer-marca">
+                    <p class="footer-logo">MRG Motors</p>
+                    <p class="footer-frase">Sua próxima máquina está aqui.</p>
                 </div>
 
                 <div class="footer-creditos">
-                    <p>© 2026 MRG Motors</p> 
-                    <p>Desenvolvido por Gabriel Ranholli, Rafael José e Miguel Fontani</p> 
-                    <a href="../index.html">Página de entrada</a> 
-                </div> 
-            </div> 
-        </footer> 
-    </body> 
+                    <p>© 2026 MRG Motors</p>
+                    <p>Desenvolvido por Gabriel Ranholli, Rafael José e Miguel Fontani</p>
+                    <a href="../index.html">Página de entrada</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
 </html>
