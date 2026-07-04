@@ -1,7 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body{
     margin: 0;
     background: #1c1a1a;
     font-family: 'League Spartan', sans-serif;
+    overflow-x: hidden;
+}
+
+#principal{
+    padding: 0;
 }
 
 /* HEADER */
@@ -52,7 +62,8 @@ body{
 #cabecalho nav a{
     text-decoration: none;
     color: #FBFCF8;
-    font-size: 1.35rem;
+    /* font-size: 1.35rem; */
+    font-size: clamp(1rem, 2vw, 1.35rem);
     font-weight: bold;
     padding: 0.5rem 0;
     position: relative;
@@ -81,9 +92,178 @@ body{
 
 /* HEADER */
 
+/* CONTATO */
 
+#contato{
+    max-width: 1600px;
+    margin: 8rem auto;
+    padding: 0 4rem;
+    box-sizing: border-box;
+    color: whitesmoke;
+}
+
+.contato-titulo{
+    margin-bottom: 4rem;
+}
+
+.contato-titulo h1{
+    font-size: clamp(2.4rem, 6vw, 4rem);
+    margin: 0;
+    font-weight: bolder;
+}
+
+.contato-titulo h1::before{
+    content: "";
+    display: block;
+    width: 4rem;
+    height: .3rem;
+    background: #a20e0e;
+    margin-bottom: 1rem;
+}
+
+.contato-titulo span{
+    color: #a20e0e;
+}
+
+.contato-titulo p{
+    margin-top: 1rem;
+    color: #ccc;
+    font-size: clamp(1rem,2vw,1.25rem);
+    max-width: 45rem;
+    line-height: 1.5;
+}
+
+#contato-conteudo{
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    align-items: flex-start;
+}
+
+/* CONTATO */
+
+/* FORMULÁRIO */
+
+.formulario-card{
+    flex: 2;
+    background: #111;
+    border-radius: 1rem;
+    padding: 2.5rem;
+    border: 1px solid rgba(255,255,255,.08);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.4);
+}
+
+#form-contato{
+    display: flex;
+    flex-direction: column;
+}
+
+#form-contato h2{
+    margin: 0 0 2rem;
+    font-size: 2rem;
+}
+
+#form-contato label{
+    margin-bottom: .5rem;
+    font-weight: bold;
+    color: whitesmoke;
+}
+
+#form-contato input,
+#form-contato textarea{
+    width: 100%;
+    padding: .9rem 1rem;
+    margin-bottom: 1.3rem;
+    border-radius: .7rem;
+    border: 1px solid rgba(255,255,255,.08);
+    background: #1c1a1a;
+    color: whitesmoke;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: .3s ease;
+}
+
+#form-contato input:focus,
+#form-contato textarea:focus{
+    outline: none;
+    border-color: #a20e0e;
+    box-shadow: 0 0 .6rem rgba(162,14,14,.4);
+}
+
+#form-contato textarea{
+    resize: vertical;
+    min-height: 10rem;
+}
+
+/* FORMULÁRIO */
+
+/* BOTÕES */
+
+.botoes{
+    display: flex;
+    gap: 1rem;
+    margin-top: .5rem;
+}
+
+.botoes button{
+    flex: 1;
+    padding: 1rem;
+    border: none;
+    border-radius: 2rem;
+    background: #a20e0e;
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.botoes button:hover{
+    background: #7d0b0b;
+    transform: translateY(-3px);
+}
+
+/* BOTÕES */
+
+
+/* INFORMAÇÕES */
+
+#info-contato{
+    flex: 1;
+}
+
+#info-contato h2{
+    margin: 0 0 2rem;
+    font-size: 2rem;
+}
+
+.info-item{
+    background: #111;
+    border-left: .3rem solid #a20e0e;
+    border-radius: .9rem;
+    padding: 1rem 1.2rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 .8rem 1.5rem rgba(0,0,0,.35);
+}
+
+.info-item span{
+    display: block;
+    color: whitesmoke;
+    font-weight: bold;
+    margin-bottom: .5rem;
+    font-size: 1.05rem;
+}
+
+.info-item p{
+    margin: 0;
+    color: #ccc;
+    line-height: 1.4;
+}
+
+/* INFORMAÇÕES */
 
 /* FOOTER */
+
 footer{
     width: 100%;
     background: #111;
@@ -128,4 +308,142 @@ footer a{
     text-decoration: none;
     color: #a20e0e;
 }
+
 /* FOOTER */
+
+/* RESPONSIVIDADE */
+
+@media screen and (max-width:1200px){
+
+    #contato-conteudo{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .formulario-card,
+    #info-contato{
+        width: 100%;
+    }
+
+    #info-contato{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .info-item{
+        margin-bottom: 0;
+    }
+
+}
+
+@media screen and (max-width:900px){
+
+    #topo{
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1.5rem 2rem;
+    }
+
+    #cabecalho ul{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+     #contato{
+        margin: 5rem auto;
+        padding: 0 1.5rem;
+    }
+
+    .contato-titulo{
+        margin-bottom: 2.5rem;
+    }
+
+    .contato-titulo h1{
+        text-align: center;
+    }
+
+    .contato-titulo h1::before{
+        margin: 0 auto 1rem;
+    }
+
+    .contato-titulo p{
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .formulario-card{
+        padding: 2rem;
+    }
+
+    .botoes{
+        flex-direction: column;
+    }
+
+    .botoes button{
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 780px){
+
+    #topo{
+        flex-direction: column;
+        padding: 1.5rem;
+    }
+
+    #contato{
+        padding: 0 1rem;
+    }
+
+    .formulario-card{
+        width: 100%;
+        max-width: 100%;
+        padding: 1.5rem;
+    }
+
+    #form-contato{
+    width: 100%;
+    }
+
+    #form-contato h2,
+    #info-contato h2{
+        font-size: 1.6rem;
+        text-align: center;
+    }
+
+    #form-contato input,
+    #form-contato textarea{
+        padding: .8rem;
+        max-width: 100%;
+    }
+
+    #info-contato{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .info-item{
+        padding: 1rem;
+    }
+
+    .info-item span{
+        font-size: 1rem;
+    }
+
+        footer{
+        padding: 2rem 1.5rem;
+        margin-top: 6rem;
+    }
+
+    .footer-conteudo{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-creditos{
+        text-align: center;
+    }
+}
