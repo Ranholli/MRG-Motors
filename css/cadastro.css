@@ -1,0 +1,471 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background: #1c1a1a;
+    font-family: 'League Spartan', sans-serif;
+    overflow-x: hidden;
+}
+
+#principal{
+    padding: 0;
+}
+
+/* HEADER */
+#cabecalho{
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #111;
+}
+
+#topo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #111;
+    padding: 1.2rem 4rem;
+    border-bottom: 0.25rem solid #a20e0e;
+    box-sizing: border-box;  
+}
+
+.logo{
+    display: inline-block;
+    margin: 0;
+    color: whitesmoke;
+    font-size: clamp(1.6rem, 3vw, 2rem);
+    font-weight: bolder;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.logo:hover{
+    transform: translateY(-0.2rem);
+}
+
+#cabecalho ul{
+    display: flex;
+    list-style: none;
+    gap: 3rem;
+    padding: 0;
+    margin: 0;
+}
+
+#cabecalho li{
+    transition: 0.3s ease;
+}
+
+#cabecalho nav a{
+    text-decoration: none;
+    color: #FBFCF8;
+    font-size: clamp(1rem, 2vw, 1.35rem);
+    font-weight: bold;
+    padding: 0.5rem 0;
+    position: relative;
+    transition: 0.3s ease;
+}
+
+#cabecalho nav a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.35rem;
+    width: 0;
+    height: 0.15rem;
+    background: #a20e0e;
+    transition: 0.3s ease;
+}
+
+#cabecalho nav a:hover::after{
+    width: 100%;
+}
+
+#cabecalho li:hover{
+    transform: translateY(-0.25rem);
+}
+/* HEADER */
+
+/* CADASTRO */
+#cadastro{
+    max-width: 1600px;
+    margin: 8rem auto;
+    padding: 0 4rem;
+    box-sizing: border-box;
+    color: whitesmoke;
+}
+
+.cadastro-titulo{
+    margin-bottom: 4rem;
+}
+
+.cadastro-titulo h1{
+    font-size: clamp(2.4rem, 6vw, 4rem);
+    margin: 0;
+    font-weight: bolder;
+}
+
+.cadastro-titulo h1::before{
+    content: "";
+    display: block;
+    width: 4rem;
+    height: .3rem;
+    background: #a20e0e;
+    margin-bottom: 1rem;
+}
+
+.cadastro-titulo span{
+    color: #a20e0e;
+}
+
+.cadastro-titulo p{
+    margin-top: 1rem;
+    color: #ccc;
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    max-width: 45rem;
+    line-height: 1.5;
+}
+/* CADASTRO */
+
+/* CONTEÚDO */
+#cadastro-conteudo{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 3rem;
+    width: 100%;
+    min-width: 0;
+}
+
+.formulario-card{
+    flex: 2 1 0;
+    min-width: 0;
+    background: #111;
+    border-radius: 1rem;
+    padding: 2.5rem;
+    border: 1px solid rgba(255,255,255,.08);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.4);
+}
+
+#info-cadastro{
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+#info-cadastro h2{
+    margin: 0 0 2rem;
+    font-size: clamp(1.6rem, 3vw, 2rem);
+}
+/* CONTEÚDO */
+
+/* FORMULÁRIO */
+#form-cadastro{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 0;
+}
+
+#form-cadastro h2{
+    margin: 0 0 2rem;
+    font-size: clamp(1.6rem, 3vw, 2rem);
+}
+
+#form-cadastro label,
+.grupo-radio p{
+    margin-bottom: .5rem;
+    font-weight: bold;
+    color: whitesmoke;
+}
+
+#form-cadastro input,
+#form-cadastro textarea,
+#form-cadastro select{
+    width: 100%;
+    max-width: 100%;
+    padding: .9rem 1rem;
+    margin-bottom: 1.3rem;
+    border-radius: .7rem;
+    border: 1px solid rgba(255,255,255,.08);
+    background: #1c1a1a;
+    color: whitesmoke;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: .3s ease;
+    font-family: 'League Spartan', sans-serif;
+}
+
+#form-cadastro input:focus,
+#form-cadastro textarea:focus,
+#form-cadastro select:focus{
+    outline: none;
+    border-color: #a20e0e;
+    box-shadow: 0 0 .6rem rgba(162,14,14,.4);
+}
+
+#form-cadastro textarea{
+    resize: vertical;
+    min-height: 10rem;
+}
+
+.linha-form{
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    min-width: 0;
+}
+
+.campo-form{
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+.grupo-radio{
+    margin-bottom: 1.3rem;
+}
+
+.opcoes-radio{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.opcoes-radio label{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    background: rgba(255,255,255,.04);
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: .7rem;
+    padding: .9rem 1rem;
+    margin: 0;
+}
+
+.opcoes-radio input{
+    width: auto;
+    margin: 0;
+}
+/* FORMULÁRIO */
+
+/* BOTÕES */
+.botoes{
+    display: flex;
+    gap: 1rem;
+    margin-top: .5rem;
+}
+
+.botoes button{
+    flex: 1;
+    padding: 1rem;
+    border: none;
+    border-radius: 2rem;
+    background: #a20e0e;
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.botoes button:hover{
+    background: #7d0b0b;
+    transform: translateY(-3px);
+}
+/* BOTÕES */
+
+/* INFORMAÇÕES */
+#cards-info{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.info-item{
+    background: #111;
+    border-left: .3rem solid #a20e0e;
+    border-radius: .9rem;
+    padding: 1rem 1.2rem;
+    box-shadow: 0 .8rem 1.5rem rgba(0,0,0,.35);
+}
+
+.info-item span{
+    display: block;
+    color: whitesmoke;
+    font-weight: bold;
+    margin-bottom: .5rem;
+    font-size: 1.05rem;
+}
+
+.info-item p{
+    margin: 0;
+    color: #ccc;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+/* INFORMAÇÕES */
+
+/* FOOTER */
+footer{
+    width: 100%;
+    background: #111;
+    color: whitesmoke;
+    margin-top: 10rem;
+    padding: 2.5rem 4rem;
+    border-top: 0.4rem solid #a20e0e;
+    box-sizing: border-box;
+}
+
+.footer-conteudo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.footer-logo{
+    font-size: clamp(1.6rem, 3vw, 2rem);
+    font-weight: bolder;
+    margin: 0;
+    color: #fff;
+}
+
+.footer-frase{
+    font-size: clamp(1rem, 1.8vw, 1.1rem);
+    margin: 0.5rem 0 0 0;
+    color: #ccc;
+}
+
+.footer-creditos{
+    text-align: right;
+    font-size: clamp(0.85rem, 1.5vw, 0.95rem);
+    color: #bbb;
+}
+
+.footer-creditos p{
+    margin: 0.3rem 0;
+}
+
+footer a{
+    text-decoration: none;
+    color: #a20e0e;
+}
+/* FOOTER */
+
+/* RESPONSIVIDADE */
+@media screen and (max-width:1200px){
+    #cadastro-conteudo{
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .formulario-card,
+    #info-cadastro{
+        width: 100%;
+        max-width: 100%;
+        flex: none;
+    }
+
+    #cards-info{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .info-item{
+        flex: 1 1 calc(50% - 1rem);
+        min-width: 18rem;
+    }
+}
+
+@media screen and (max-width:900px){
+    #topo{
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1.5rem 2rem;
+    }
+
+    #cabecalho ul{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    #cadastro{
+        margin: 5rem auto;
+        padding: 0 1.5rem;
+    }
+
+    .cadastro-titulo{
+        margin-bottom: 2.5rem;
+    }
+
+    .formulario-card{
+        padding: 2rem;
+    }
+
+    .linha-form{
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .botoes{
+        flex-direction: column;
+    }
+
+    .botoes button{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 780px){
+    #topo{
+        flex-direction: column;
+        padding: 1.5rem;
+    }
+
+    #cadastro{
+        padding: 0 1rem;
+    }
+
+    .formulario-card{
+        padding: 1.5rem;
+    }
+
+    #form-cadastro input,
+    #form-cadastro textarea,
+    #form-cadastro select{
+        padding: .8rem;
+    }
+
+    #cards-info{
+        flex-direction: column;
+    }
+
+    .info-item{
+        min-width: 0;
+        flex: none;
+        padding: 1rem;
+    }
+
+    .info-item span{
+        font-size: 1rem;
+    }
+
+    footer{
+        padding: 2rem 1.5rem;
+        margin-top: 6rem;
+    }
+
+    .footer-conteudo{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-creditos{
+        text-align: center;
+    }
+}
